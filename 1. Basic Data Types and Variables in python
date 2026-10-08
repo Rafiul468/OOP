@@ -1,0 +1,24 @@
+# variable declaration
+
+age = 10
+name = "python man"
+district = "outof python"
+insterest_rate = 3.56
+is_single = True
+is_sleeping = False
+
+
+
+# variable print
+print(age)
+print(age + insterest_rate)
+print(district)
+
+
+
+
+# print variable type
+print(type(age))
+print(type(insterest_rate))
+print(type(is_single))
+print(type(district))
