@@ -1,0 +1,36 @@
+# in, not, not in, is, is not
+
+
+# if, elif, else
+a =4
+if a>5:
+    print('Oh! A number larger than 5.')
+elif a==4:
+    print('yeah! there is an equal number.')
+else:
+    print('Ohh, No! A number gerter than 5.')
+
+
+
+
+#nested conditions:
+
+Travels = True
+coin = 'tail'
+if Travels == True:
+    print("We go to cox's Bazar")
+    if coin == 'tail':
+        print("yeah! we are going cox's Bazar and rangamiti")
+    else:
+        print("We are go to Dhaka")
+
+
+# and or:
+
+boss = True
+coin = 'tail'
+
+if boss == True and coin == 'tail':
+    print("We are going to Cox's Bazar!")
+else:
+    print("We are not going.")
