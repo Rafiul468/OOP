@@ -1,0 +1,86 @@
+#float:
+
+num = 10.63
+print(num)
+print(type(num))
+
+#take 3 numbers from the user and give me the largest number as output:
+
+num_1 = float(input("Enter the first number: "))
+num_2 = float(input("Enter the second number: "))
+num_3 = float(input("Enter the third number: "))
+
+largest = max(num_1, num_2, num_3)
+
+print(f"The largest number: {largest}")
+
+num_1 = int(input("Enter the first number: "))
+num_2 = int(input("Enter the second number: "))
+num_3 = int(input("Enter the third number: "))
+
+if(num_1 >= num_2) and (num_1 >= num_3):
+    largest = num_1
+elif(num_2 >= num_1) and (num_2 >= num_3):
+    largest = num_2
+else:
+    largest = num_3
+    print("The largest number is: ",largest)
+
+
+
+
+#take 3 numbers from the use and give me the sum of the numbers:
+
+num_1 = int(input("Enter first number: "))
+num_2 = int(input("Enter second number: "))
+num_3 = int(input("Enter third number: "))
+
+sum_num = num_1+num_2+num_3
+sum = 0
+
+sum = sum + sum_num
+
+# print("Total sum: ",sum)
+
+
+
+num_1 = int(input("Enter first number: "))
+num_2 = int(input("Enter second number: "))
+num_3 = int(input("Enter third number: "))
+
+numbers = [num_1, num_2, num_3]
+
+for num in numbers:
+    print(num)
+
+total_sum = sum(numbers)
+print("Total sum: ",total_sum)
+
+
+
+
+
+# run a loop and show my the odd numbers between 39 to 68:
+
+for i in range(39,68,2):
+    print(i)
+
+
+# Grade calculator in python(if, elif, else)
+score = float(input("Enter your Score: (10-100)"))
+if score <0 or score> 100:
+    print("Invalaid score!")
+else:
+    if score >= 90:
+        gread = 'A'
+    elif score >= 80:
+        gread = 'B'
+    elif score >= 70:
+        gread = 'C'
+    elif score >= 60:
+        gread = 'D'
+    elif score >= 70:
+        gread = 'E'
+    else:
+        gread = 'F'
+    print("Your gread is: ", gread)
