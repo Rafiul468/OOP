@@ -1,0 +1,87 @@
+def full_name(first, last):
+    name = f'full name is: {first} {last}'
+    return name
+name = full_name('Rohim','Korim')
+print(name)
+
+
+# **kwargs থেকে Value বের করা
+
+
+def student_info(**kwargs):
+    for key, value in kwargs.items():
+        print(key, ":", value)
+
+student_info(name="Rafi", age=22, department="CST")
+
+
+
+# দুটি সংখ্যা থেকে যোগ ও বিয়োগ
+
+
+def calculate(a, b):
+    addition = a + b
+    subtraction = a - b
+
+    return addition, subtraction
+
+result = calculate(20, 10)
+print(result)
+
+
+
+
+
+
+# আলাদাভাবে Value গ্রহণ করা
+ 
+
+def calculate(a, b):
+    return a + b, a - b
+
+total, difference = calculate(20, 10)
+
+print("Total:", total)
+print("Difference:", difference)
+
+
+
+
+# return values
+
+def student_result():
+    name = "Rafi"
+    marks = 85
+    passed = True
+
+    return name, marks, passed
+
+name, marks, passed = student_result()
+
+print(name)
+print(marks)
+print(passed)
+
+
+
+
+
+
+#kargs & multiple:
+
+def student_result(**kwargs):
+    name = kwargs["name"]
+    marks = kwargs["marks"]
+
+    passed = marks >= 40
+
+    return name, marks, passed
+
+name, marks, passed = student_result(
+    name="Rafi",
+    marks=85
+)
+
+print("Name:", name)
+print("Marks:", marks)
+print("Passed:", passed)
