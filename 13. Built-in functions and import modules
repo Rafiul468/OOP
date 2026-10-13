@@ -1,0 +1,19 @@
+# build in function
+
+highest = max(45,52,36,78,10)
+print(highest)
+
+smallest = min(45,52,36,78,10)
+print(smallest)
+
+total = sum([45,52,36,78,10])
+print(total)
+
+count = len([45,52,36,78,10])
+print(count)
+
+
+
+# import module 
+
+# (আগের ফাইলের নাম import ঐ ফাইলের function কে নিব।) 
