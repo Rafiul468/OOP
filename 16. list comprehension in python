@@ -1,0 +1,22 @@
+numbers = [25,45,78,639,55,70]
+odds = []
+for num in numbers:
+    if num % 2 == 1 and num % 5 == 0:
+        odds.append(num)
+print(odds)
+# odds_nums = [num for num in numbers]
+odds_nums = [num for num in numbers if num % 2 == 1 if num % 5 == 0]
+print(odds_nums)
+
+
+
+age_comb = []
+players = ['Sakib','Musfiqur', 'Musta', 'Miraz']
+ages = [38, 36, 27, 16]
+
+for player in players:
+    print('player:',player)
+    for age in ages:
+        print(player,age)
+        age_comb.append([player,age])
+print(age_comb)
