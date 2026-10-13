@@ -1,0 +1,38 @@
+#local variable 
+
+def my_function():
+    x = 10
+    print(x)
+
+my_function()
+
+
+
+def my_balance():
+    z = 3000
+my_balance()
+print(z)
+
+
+
+
+# Global variable
+
+x = 100
+
+def my_function():
+    print(x)
+my_function()
+print(x)
+
+
+
+
+# Global keyword
+
+x = 10
+def change():
+    global x    #global keyword
+    x = 50
+change()
+print(x)
