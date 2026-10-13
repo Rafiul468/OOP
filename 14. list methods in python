@@ -1,0 +1,33 @@
+numbers = [12,25,36,65,48]
+numbers.append(56)
+print(numbers)
+
+
+numbers = [12,25,36,65,48]
+numbers.insert(2,71)    #index, value
+print(numbers)
+
+
+numbers = [12,25,36,65,48]
+numbers.remove(25)
+print(numbers)
+
+
+numbers = [12,25,36,65,48]
+numbers.pop()
+print(numbers)
+
+
+numbers = [12,25,36,65,48]
+numbers.append(56)
+print(numbers)
+
+
+numbers = [12,25,36,65,48]
+numbers.sort()
+print(numbers)
+
+
+numbers = [12,25,36,65,48]
+numbers.reverse()
+print(numbers)
