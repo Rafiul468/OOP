@@ -1,0 +1,20 @@
+#list --> []
+#tuple --> ()
+# set -->{}
+#set: unique items collection. No duplicate
+numbers = [12, 23, 45, 56, 67, 78]
+print(numbers)
+numbers_set = set(numbers)
+print(numbers_set)
+numbers_set.add(34)
+print(numbers_set)
+numbers_set.remove(12)
+print(numbers_set)
+
+for item in numbers_set:
+    print(item)
+
+if 45 in numbers_set:
+    print('45 exists')
+elif 34 in numbers_set:
+    print('34 exists')
