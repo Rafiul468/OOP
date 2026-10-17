@@ -1,0 +1,26 @@
+def multiple():
+    return 3,4
+# print(multiple())
+things = 'pen','tripod', 'water bottle'
+print(type(things))
+
+
+
+def multiple():
+    return 3,4
+things = 'pen', 'tripod', 'water bottle','charger','phone','web cam','sunglass'
+print(things[0])
+print(things[-2])
+print(things[3:6])
+
+if 'phone' in things:
+    print('yeaaah !')
+for item in things:
+    print(item)
+
+# mitable tuple 
+
+mega = ([2,3,4,5],[3,0,8,7])
+print (mega[0])
+mega[0][3] = 76
+print(mega)
