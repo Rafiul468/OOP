@@ -1,0 +1,46 @@
+numbers = [12,23,34,45,4,56,67]
+persion  = ['Rohim', 'khulna', 24, 'stuent']
+
+
+# {key: value, key: value, key: value} 
+persion ={'name': 'Rohim', 'address': 'Rangpur', 'age': 23, 'job':'student'}
+print(persion)
+
+
+print(persion['address'])
+
+#key value pair
+print(persion.keys())
+
+print(persion.values())
+
+
+persion['language'] = 'python'
+print(persion)
+
+
+persion['name'] = 'AH.Korim'
+print(persion)
+
+
+persion['address'] = 'Gaibandha'
+print(persion)
+
+
+del persion['job']
+print(persion)
+
+
+# special dictionary looping
+for item in persion.items():
+    print(item)
+
+# need index & value
+nums = [23,3,4,5,7,8]
+for i, num in enumerate(nums):
+    print(i,num)
+
+#dictionary
+#object
+#hash table
+# overlap with set
