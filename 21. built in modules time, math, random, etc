@@ -1,0 +1,46 @@
+from math import *
+result = ceil(4.6)
+print(result)
+
+
+
+from math import *
+result = floor(4.95)
+print(result)
+
+
+from random import*
+print(random())
+print(randint(1,100))
+print(choice(['rakib','sakib','rohim','korim']))
+
+
+
+# 4 সেকেন্ড অপেক্ষা করে
+from time import sleep
+sleep(4)
+
+# Timestamp-কে সহজে পড়ার মতো সময়ে দেখায়
+from time import ctime
+print(ctime())
+
+# বর্তমান Unix timestamp
+from time import time
+print(time())
+
+# স্থানীয় সময়কে বিভিন্ন অংশে ভাগ করে
+from time import localtime
+print(localtime())
+
+# নিজের পছন্দমতো সময় Format করে
+from time import strftime
+print(strftime("%d-%m-%Y %H:%M:%S")) 
+
+
+
+
+            # datetime
+
+import datetime
+print(datetime.datetime.now())
+
