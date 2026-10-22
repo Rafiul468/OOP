@@ -1,0 +1,45 @@
+def double(x):
+    return x*2
+
+
+double = lambda num : num*2
+
+result = double(44)
+print(result)
+
+
+squared = lambda num : num * num
+output = squared(9)
+print(output)
+
+
+add = lambda x,y : x+y
+sum = add (11 ,33)
+print(sum)
+
+
+
+num = [12,25,14,36,78,23,45,69]
+double_nums = map(double, num)
+print(num)
+print(list(double_nums))
+
+
+
+
+actors = [
+    {'name': 'Rakib', 'age': 22},
+    {'name': 'Sakib', 'age': 32},
+    {'name': 'Rasik', 'age': 42},
+    {'name': 'Rohim', 'age': 55},
+    {'name': 'Korim', 'age': 62},
+    {'name': 'Mofis', 'age': 12},
+    {'name': 'Sunny', 'age': 21},
+    {'name': 'Leone', 'age': 14},
+]
+
+juniors = filter(lambda actor: actor['age'] < 40, actors)
+Fivers = filter(lambda actor : actor ['age'] %5 ==0, actors)
+
+print(list(juniors))
+print(list(Fivers))
