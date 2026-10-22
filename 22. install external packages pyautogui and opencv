@@ -1,0 +1,87 @@
+                                #pyautogui 
+
+
+import pyautogui
+
+
+from time import sleep
+sleep(5)
+for i in range(0,3):
+    pyautogui.write('Hello friends, this message was sent using Python programming.', interval=0.25)
+    pyautogui.press('enter')
+
+
+
+
+
+import pyautogui
+
+screenWidth, screenHeight = pyautogui.size()
+print(screenWidth, screenHeight)   # 1920 1080
+
+
+
+
+
+import pyautogui
+
+currentMouseX, currentMouseY = pyautogui.position() # Get the XY position of the mouse.
+print(currentMouseX, currentMouseY)
+
+
+
+
+
+import pyautogui
+import time
+
+time.sleep(5)   # ৫ সেকেন্ডে Paint খুলে ক্যানভাসে মাউস রাখো, পেনসিল টুল সিলেক্ট করা থাকবে
+
+distance = 200
+while distance > 0:
+    pyautogui.drag(distance, 0, duration=0.5)
+    distance -= 5
+    pyautogui.drag(0, distance, duration=0.5)
+    pyautogui.drag(-distance, 0, duration=0.5)
+    distance -= 5
+    pyautogui.drag(0, -distance, duration=0.5)
+
+
+
+
+
+                          #opencv
+
+                          
+
+import cv2
+cam = cv2.VideoCapture(0)
+while True:
+    _, frame = cam.read()
+    cv2.imshow('my cam', frame)
+    cv2.waitKey(1)
+
+
+
+
+
+import cv2
+# Open the webcam
+cam = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cam.read()
+
+    if not ret:
+        print("Camera not found!")
+        break
+
+    cv2.imshow("My Webcam", frame)
+
+    # press q to exit 
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+    cam.release()
+    cv2.destroyAllWindows()
+
