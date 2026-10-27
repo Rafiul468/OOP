@@ -1,0 +1,40 @@
+class Phone:
+    manufacture ='china'
+
+    def __init__(self, owner, brand, price):    #onnanno programming language e jeta 'constactor' python e seta 'initialazition' or init.
+        self.owner = owner      #self.owner = attrubut name.
+        self.brand = brand
+        self.price = price
+
+    def send_sms(self, phone, sms):
+        text = f'sending to: {phone} {sms}'
+        print(text)
+
+
+my_phone = Phone('ZakarBak', 'Google_pixel', 72400)
+print(my_phone.owner, my_phone.brand, my_phone.price)
+
+
+her_phone = Phone('He', 'I phone', 1800000)
+print(her_phone.owner, her_phone.brand, her_phone.price)
+
+
+
+
+
+
+class Pen:
+    manufacture = 'Bangladesh'
+
+    def __init__(self, owner, brand, price):
+        self.owner = owner
+        self.brand = brand
+        self.price = price
+
+
+    def write_pen(self, book, Notebook):
+        text = f'We Read the:{book} write the:{Notebook}'
+        print(text)
+
+my_pen = Pen('my_Kalam Khan', 'MATADOR Pinpoint', 7)
+print(my_pen.owner, my_pen.brand, my_pen.price)
