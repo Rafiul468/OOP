@@ -1,0 +1,12 @@
+class information:      #symple class
+    name = 'Rafi'
+    roll = 811476
+    # e-mail = "rafiulrafi"
+    dep = 'CST'
+    
+
+my_information = information()      #class object
+print(my_information)
+print(my_information.name)
+print(my_information.roll)
+print(my_information.dep)
