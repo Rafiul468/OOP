@@ -1,0 +1,84 @@
+def call():
+    print('calling somenone i dont know')
+    return 'call done'
+
+class Phone:
+    price = 19000
+    color = 'black'
+    brand = 'samsung'
+    features = ['camera', 'speaker', 'hammer']
+
+    def call(self): #methods er somoy "self" use hoy. 
+        print('calling one person')
+
+    def send_sms(self, phone, sms):     #methods er somoy "self" use hoy.
+        text = f'sending SMS to: {phone} and massage: {sms}'
+        return text
+
+
+my_Phone = Phone()
+
+print(my_Phone.features)
+my_Phone.call()
+result = my_Phone.send_sms(2164, 'I forgot to miss you')
+print(result)
+
+
+
+    # add two numbers
+
+class claculator:
+    brand = 'Casio MS990'
+    def add(self, num1, num2):
+        return num1 + num2
+
+my_claculator = claculator()
+
+
+print(my_claculator.brand)
+
+result = my_claculator.add(10,20)
+print(result)
+
+
+    # sub two numbers
+
+class Calculator:
+    brand = 'Sony MS100'
+    def sub (self, num1, num2):
+        return num1 - num2
+My_Calculator = Calculator()
+
+print(My_Calculator.brand)
+
+result = My_Calculator.sub(50,30)
+print(result)
+
+
+
+    # multiply
+
+class threenumbers:
+    know = 'There are three numbers'
+    def mul(self, num1, num2):
+        return num1 * num2
+They_are_Threenumbers = threenumbers()
+
+print(They_are_Threenumbers.know)
+
+result = They_are_Threenumbers.mul(40,20)
+print(result)
+
+
+    # multiply
+
+class Division:
+    brand = 'This is a Division number'
+    def div(self, num1, num2):
+        return num1/num2
+my_Division = Division()
+
+print(my_Division.brand)
+
+result = my_Division.div(100,5)
+print(result)
