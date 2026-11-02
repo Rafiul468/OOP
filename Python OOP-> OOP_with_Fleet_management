@@ -1,0 +1,82 @@
+#Bus Poribohon
+
+
+class Company:
+    def __init__(self, name, address) -> None:  #bracker er vitor prameters use hoice
+        self.name = name
+        self.bus = []
+        self.routes = []
+        self.drivers = []
+        self.counters = []
+        self.managers = []
+        self.supervisors = []
+        self.fare = []
+
+
+class Driver:
+    def __init__(self, name, license, age) -> None:
+        self.name = name
+        self.license = license
+        self.age = age
+        
+
+class Counter:
+    def __init__(self, Dhaka,Dinajpur, R1_Roads ) -> None:
+        self.Dhaka = Dhaka 
+        self.Road = R1_Roads
+
+    def __init__(self, start, destination):
+        self.start = start
+        self.destination = destination
+
+class Passenger:
+    def __init__(self, amonunt, Home, Balance) ->None:
+        self.amount = amonunt
+        self.Home = Home
+        self.Balance = Balance
+
+
+
+class Supervisor:
+    pass
+
+
+
+
+
+
+
+
+
+class Travel:
+    def __init__(self, brand, model, bus_id):
+        self.brand = brand
+        self.model = model
+        self.bus_id = bus_id
+        self.is_available = True
+
+
+    def show_info (self):
+        print("Brand: ", self.brand)
+        print("Model: ", self.model)
+        print("BUS ID: ", self.bus_id)
+
+
+    def start_trip (self):
+        if self.is_available:
+            self.is_available = False
+            print("Trip Started")
+        else:
+            print("Bus is Alrady in Use.")
+
+    def end_trip (self):
+        self.is_available = True
+        print("Trip Ended.")
+
+
+
+Bus = Travel('Toyota', 'Coralla', 101)
+
+Bus.show_info()
+Bus.start_trip()
+Bus.end_trip()
