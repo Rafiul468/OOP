@@ -1,0 +1,81 @@
+class Bank:
+    def __init__(self, balance):
+        self.balance = balance
+        self.min_withdrow = 100
+        self.max_withdrow = 100000
+
+    def get_balance(self):
+        return self.balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+
+    def withdrow(self, amount):
+        if amount < self.min_withdrow:
+            print(f'You Can Withdrow Below: {self.min_withdrow}')
+
+        elif amount > self.max_withdrow:
+            print(f'This is not possible. You Can Withdrow Below: {self.max_withdrow}')
+
+        else:
+            self.balance -= amount
+            print(f'here is your money: {amount}')
+            print(f'The_City_Bangk !! Your balance after withdrow: {self.balance}')
+            print(f'NRBC !! Your balance after deposit: {self.get_balance()}')
+
+
+
+The_City_Bank = Bank(300000)
+The_City_Bank.withdrow(50)
+The_City_Bank.withdrow(30000000)
+The_City_Bank.withdrow(100000)
+
+
+NRBC = Bank(3000)
+NRBC.deposit(1000)
+NRBC.deposit(3000)
+print(NRBC.get_balance())
+
+
+
+
+
+
+                # H.W -> EXam Attend
+
+class Exam:
+    def __init__(self, attend):
+        self.attend = attend
+        self.min_attend = 292
+        self.max_attend = 360
+
+    def get_attend(self):
+        return self.attend
+
+    def daily_attend(self, regular):
+        if regular > 0:
+            self.attend += regular
+
+    def non_attendance(self, regular):
+        if regular > 0:
+            self.attend -= regular
+
+        if self.attend < self.min_attend:
+            print("Your attendance is too low.")
+
+        elif self.attend > self.max_attend:
+            print("Your attendance is higher than expected.")
+
+        else:
+            print("You are eligible for the examination.")
+
+
+ABC = Exam(290)
+
+ABC.daily_attend(12)
+
+ABC.non_attendance(5)
+
+print("Total Attendance:", ABC.get_attend())
+
