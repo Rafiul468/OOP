@@ -1,0 +1,75 @@
+class Shopping:
+    def __init__(self, name):
+        self.name = name
+        self.cart = []
+
+    def add_to_cart(self, item, price, quantity):
+        product = {'item': item, 'price':price, 'quantity':quantity}
+        self.cart.append(product)
+
+
+    def checkout(self, amount):
+        total = 0
+        for item in self.cart:
+            # print(item)
+            total += item['price'] * item['quantity']
+        print('total price: ', total)
+        if amount < total:
+            print(f'Please provide {total - amount} more')
+        else:
+            extra = amount - total
+            print(f'Here is your items and extra money{extra}')
+
+
+Swapan = Shopping('Rafi')
+Swapan.add_to_cart('Pen',15,2)
+Swapan.add_to_cart('watch', 1350, 1)
+Swapan.add_to_cart('Cap', 1200, 4)
+
+
+print(Swapan.cart)
+Swapan.checkout(600)
+Swapan.checkout(6600)
+Swapan.checkout(6180)
+
+
+
+
+
+
+
+
+
+class Shopping:
+    def __init__(self, name):
+        self.name = name
+        self.cart = []
+
+    def add_to_cart(self, item, price, quantity):
+        product = {'item': item, 'price': price, 'quantity': quantity}
+        self.cart.append(product)
+
+    def checkout(self, amount):
+        total = 0
+        for item in self.cart:
+            total += item ['price'] * item['quantity']
+        print('total price: ', total)
+
+        if amount < total:
+            print(f'Please provide {total - amount} more')
+        else:
+            extra = amount - total
+            print(f'Here is your items and extra money{extra}')
+
+
+
+Swapan = Shopping('Rafi')
+Swapan.add_to_cart('Pen',30,4)
+Swapan.add_to_cart('Watch',1430,2)
+Swapan.add_to_cart('Cap',330,2)
+
+
+print(Swapan.cart)
+Swapan.checkout(500)
+Swapan.checkout(200)
+Swapan.checkout(1200)
