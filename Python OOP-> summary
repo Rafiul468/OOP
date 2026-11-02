@@ -1,0 +1,22 @@
+class Book:
+    def __init__(self, name):
+        self.name = name
+    def read(self):
+        raise NotImplementedError   #parent
+
+class Physics(Book):
+    def __init__(self, name, lab):
+        self.lab = lab
+        super().__init__(name)
+
+    def read(self):
+        print('Reading physics vactor.')    # child
+
+
+topopn_sir = Physics('topon_sir', True)
+
+print(issubclass(Physics,Book)) #subclass check.
+print(isinstance(topopn_sir, Physics))  #instance check.
+print(isinstance(topopn_sir, Book))
+
+topopn_sir.read()
