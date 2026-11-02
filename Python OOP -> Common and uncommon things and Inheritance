@@ -1,0 +1,76 @@
+#base class, parent class, common attribute + functuibakutt class
+#deived class, child class, uncommon  attribute + functionality class
+
+"""
+1. simple inheritance: parent class --> chile class (Gadget --> Phone) (Gadget --> Laptop)
+2. Multi-lavel inheritance: Grandafather --> parent --> child
+3. Multiple inheritance: (Father, Mother, Son)
+4. Hybrid: Grandfather, Uncle, Aunty --> Child (Father, Uncle)
+"""
+
+            # BD Gadget
+#Inheritance
+
+class Device:
+    def __init__(self, brand, price, color):
+        self.brand = brand
+        self.price = price
+        self.color = color
+
+    def run(self):
+        return f'Running laptop: {self.brand}'
+
+
+        
+
+class Laptop(Device):
+    def __init__(self, brand, price, color, memory):
+        super().__init__(brand,price,color)
+        self.memory = memory
+
+    def coding(self):
+        return f'Learning python and practicing'
+
+
+class Phone(Device):
+    def __init__(self, brand, price, color, dual_sim):
+        super().__init__(brand, price, color)
+        self.dual_sim = dual_sim
+
+
+    def phone_call(self, number, text):
+        return f'Senging SMS to: {number} and With {text}'
+    
+
+
+
+class Camera(Device):
+    def __init__(self, brand, price, color, pixel):
+        super().__init__(brand, price, color,)
+        self.pixel = pixel
+
+    def Lens(self):
+        return f'I Used kit, prime, and zoom lenses.'
+
+
+    #Objects:
+
+My_laptop = Laptop('Lenevo' ,74000, 'Black', '8GB')
+My_phone = Phone('Google Pixel' ,94000, 'Black', '256GB')
+My_camera = Camera('Sony' ,174000, 'Black', '24MP')
+
+
+print(My_laptop.brand)
+print(My_laptop.run())
+print(My_laptop.coding(), end = "\n \n")
+
+
+print(My_phone.brand)
+print(My_phone.run())
+print(My_phone.phone_call('01736325219', 'HI'), end = "\n \n")
+
+
+print(My_camera.brand)
+print(My_camera.run())
+print(My_camera.Lens())
+
