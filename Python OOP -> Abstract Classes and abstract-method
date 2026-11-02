@@ -1,0 +1,26 @@
+from abc import ABC, abstractmethod     # abc --> abstract base class
+
+class Animal(ABC):
+    @abstractmethod     #enfroce all derived class to have a eat method
+    def eat(self):
+        print('I need food!')
+
+    @abstractmethod
+    def move(self):
+        print('I love eat')
+
+
+class Monkey(Animal):
+    def __init__(self, name):
+        self.name = name
+        self.catagori = 'Monkey'
+        super().__init__()
+    def eat(self):
+        print("I eating Banana!!!")
+
+    def move(self):
+        print("Hanging on the branches!!")
+
+layka = Monkey("Lucky")
+layka.eat()
+layka.move()
