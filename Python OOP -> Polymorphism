@@ -1,0 +1,91 @@
+# # poly --> many(multiple)
+# #morph --> shape (different)
+
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+    def make_sound(self):
+        print('animal making some sound')
+
+
+class Cat(Animal):
+    def __init__(self,name):
+        super().__init__(name)
+
+    def make_sound(self):
+        print('meow meow')  #defolt er kace na jeye eti print hobe.
+
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+    def make_sound(self):
+        print('Gheu Gheu')
+
+
+class Goat (Animal):
+    def __init__(self, name):
+        super().__init__(name)
+
+    def make_sound(self):
+        print('beeah   beeah   beeah')
+
+
+
+don = Cat('Real Don')   #defolt hisabe eti print hobe.
+don.make_sound()
+
+shepared = Dog('Local Shephard')
+shepared.make_sound()
+
+mess = Goat('L M')
+mess.make_sound()
+
+
+less = Goat('Neymar')
+
+animals = [don, shepared, mess, less]
+
+for animal in animals:
+    animal.make_sound()
+
+
+
+
+                    # Shape
+
+from math import pi
+class Shape:
+    def __init__(self, name):
+        self.name = name
+
+class Rectangle(Shape):
+    def __init__(self, name, length, width):
+        self.length = length
+        self.width = width
+        super().__init__(name)
+
+    def area(self):
+        return self.length * self.width
+
+
+class Circle(Shape):
+    def __init__(self, name, radius):
+        self.radius = radius
+        super().__init__(name)
+
+
+    def area(self):
+        return pi * self.radius * self.radius
+
+
+
+reactrangle = Rectangle('mY Rectangle', 10, 9)
+circle = Circle('mY Cicrle', 15)
+
+print(reactrangle.name)
+print(reactrangle.area())
+print(circle.name)
+print(circle.area())
