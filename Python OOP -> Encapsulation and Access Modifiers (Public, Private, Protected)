@@ -1,0 +1,40 @@
+# Encapsulation --> hide details
+# access modifier: public, protected, private
+class Bank:
+    def __init__(self, holder_name, initial_deposit):
+        self.holder_name = holder_name #public attribute
+        self._branch = 'Banani 11' #protected attribute
+        self.__balance = initial_deposit #private attribute
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+
+    def withdrow(self, amonunt):
+        if amonunt < self.__balance:
+            self.__balance = self.__balance - amonunt
+            return amonunt
+        else:
+            return f'No amount'
+
+    def get_balance(self):
+        return self.__balance
+
+rafsan = Bank('Younger Brother', 100000)
+
+print(rafsan.holder_name)
+rafsan.holder_name = 'Rashik'
+
+rafsan.deposit(40000)
+
+print(rafsan.get_balance()) 
+
+print(rafsan.holder_name)
+
+print(rafsan._branch)
+
+
+#রাফসানের ব্যাংক হ্যাক করতে চাইলে--->
+
+# print(dir(rafsan))
+print(rafsan._Bank__balance)
