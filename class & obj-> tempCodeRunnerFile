@@ -1,0 +1,5 @@
+Bkash = Sopping(400)
+Bkash.cash(200)
+Bkash.cash(400)
+
+print(Bkash.get_balance())
