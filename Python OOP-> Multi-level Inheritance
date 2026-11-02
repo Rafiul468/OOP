@@ -1,0 +1,47 @@
+class Vehicle:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __repr__(self):
+        return f'{self.name} {self.price}'
+
+    def move(self):
+        pass
+
+class Bus(Vehicle):
+    def __init__(self, name, price, seat):
+        super().__init__(name, price)
+        self.seat = seat
+
+
+    def __repr__(self):
+        return super().__repr__()
+
+
+class Truck(Vehicle):
+    def __init__(self, name, price,weight):
+        super().__init__(name, price)
+        self.weight = weight
+
+
+class PicUpTrack(Vehicle):
+    def __init__(self, name, price,weight):
+        super().__init__(name, price)
+        self.weight = weight
+
+
+class AC_Bus(Bus):
+    def __init__(self, name, price, seat, temperature):
+        super().__init__(name, price, seat)
+        self.temperature = temperature
+
+    def __repr__(self):
+
+        print (f'{self.seat}')
+        return super().__repr__()
+    
+
+
+green_line = AC_Bus('Green Line', 14582564000, 22, 20)
+print(green_line)
