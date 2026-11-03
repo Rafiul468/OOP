@@ -1,0 +1,32 @@
+# static attribute (class attribute)
+# static mehtod @staticmethod
+# class method @classmethod
+
+
+class Shopping:
+    cart = [] #class attribute #static attribute
+    origin = 'chaina'
+
+    def __init__(self, location):
+        self.name = 'New Dilli'  #Instance Attribute
+        self.location = 'Indian City -> New Dilli'
+
+
+    #static method
+    
+    @staticmethod
+    def multiply(a,b):
+        result = a*b
+        print(result)
+
+
+
+       #class Method 
+    @classmethod
+    def buy(self, iteam):
+        print('I will buy a watch.', iteam)
+
+
+
+Shopping.buy('Watch')
+Shopping.multiply(5,4)
