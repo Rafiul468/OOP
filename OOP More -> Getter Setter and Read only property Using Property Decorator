@@ -1,0 +1,75 @@
+# read only---> you can not set the value. value can not b e changed.
+# getter --> get a value of a property through a method. Most of the time, you will get the value of a private attribute.
+#setter --> set a value of a property through a method. Most of the time, you will set the value of a private property.
+
+
+
+class User:
+    def __init__(self, name, age, money):
+        self._name = name
+        self._age = age
+        self.__money = money
+
+
+    #getter without any setter is readonly attribute
+    
+    @property
+    def age(self):
+        return self._age
+
+    #getter
+
+    @property
+    def salary(self):
+        return self.__money
+
+    @salary.setter
+    def salary(self, value):
+        if value < 0:
+            return 'Salary can not be negative'
+        self.__money += value
+
+Rafi = User('Rakib', 21, 12560)
+
+# print(Rafi.__money)
+print(Rafi.age)
+print(Rafi.salary)
+
+
+
+Rafi.salary = 45885
+print(Rafi.salary)
+
+                # getter
+class Student:
+    def __init__(self, name):
+        self.__name = name  # name private attribute.
+    @property   #getter make.
+    def name(self):
+        return self.__name
+
+student = Student('Rafi')
+
+print(student.name)
+
+
+
+            # setter
+
+class Student:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        self.__name = value
+
+student = Student('Rafiul')
+print(student.name)
+
+student.name = 'Rakib'
+print(student.name)
